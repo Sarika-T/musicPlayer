@@ -1,0 +1,34 @@
+@import '../../assests/view.scss';
+
+
+.mainpage {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 300px 1fr 500px;;
+    height: 100vh;
+    background-color: #111;
+    color: white;
+  
+    @media (max-width: 1024px) {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto auto;
+    }
+  
+    .song-list-panel {
+      padding: 1rem;
+      overflow-y: auto;
+      border-left: 1px solid #222;
+      border-right: 1px solid #222;
+    }
+  
+    .player-panel {
+      padding: 1rem;
+      background-color: #1a1a1a;
+      border-left: 1px solid #222;
+  
+      @media (max-width: 1024px) {
+        border-top: 1px solid #222;
+      }
+    }
+  }
+  
