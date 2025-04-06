@@ -7,7 +7,6 @@ export default function SearchBar (props) {
     const handleSearch = (e) => {
         setSearchText(e.target.value);
     }
-    console.log(searchText,"yre")
     return (
         <Form className="mb-3">
             <InputGroup>

@@ -14,7 +14,7 @@ export default function SongList(props){
             <h3 className="searchbar-text">{currentTab === 'favourites' ? 'Your Favourites' : currentTab === 'recent' ? 'Recently Payed' : 'For You'}</h3>
             <SearchBar setSearchText={setSearchText} searchText={searchText} />
             {songs.length >0 ? songs.map((song) => (
-                <Card key={song.id} className="mb-3" onClick={() => onPlay(song)}>
+                <Card key={song.id} className={`mb-3 ${currentSong?.id === song.id ? "active-song" : ""}`} onClick={() => onPlay(song)}>
                     <Card.Body className="d-flex justify-content-between align-items-center">
                         <div className="d-flex align-items-center gap-3">
                             <img src={song.thumbnail} alt="thumb" width="60" height="60" />
